@@ -25,7 +25,8 @@ y <- data_used[,2]
 
 head(x)
 head(y)
-#ctiando uma matriz, com esse processo eu crio um df com trita linha por coluna da  variavel x
+
+#criando uma matriz, com esse processo eu crio um df com trinta linha por coluna da  variavel x
 X <- matrix(x, nrow = 30)
 Y <- matrix(y, nrow = 30)
 
@@ -45,15 +46,15 @@ set.seed(12)
 
 model <- trainr(Y = Y[, train], #target
                 X = X[, train], #features
-                learningrate = 0.01,
-                hidden_dim = 15,
+                learningrate = 0.01, #podemos testar varios valores
+                hidden_dim = 15, #tbm podemos adicionar varias camadas
                 network_type = "rnn", #tbm posso usar: lstm, gru
-                numepochs = 100)
+                numepochs = 100) #o msm para o numero de epocas 
 
 #plotando os erros do modelo
 plot(colMeans(model$error), type = 'l', xlab = 'epoch', ylab = 'errors')
 
-#presição
+#precição
 Yp <- predictr(model,X[, test])
 
 #função para obter  o grau de ajuste que é o quanto % Yp expllica a variacia do Y teste
@@ -67,7 +68,7 @@ Ytest <- t(Ytest)
 Ypredicted <- matrix(Yp, nrow = 1)
 Ypredicted <- t(Ypredicted)
 
-result_data <- data. me(Ytest)
+result_data <- data.frame(Ytest)
 result_data$Ypredicted <- Ypredicted
 
 #aplicando a função rsq no df
