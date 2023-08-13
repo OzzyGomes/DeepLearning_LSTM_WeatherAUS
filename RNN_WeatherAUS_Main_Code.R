@@ -67,7 +67,7 @@ Ytest <- t(Ytest)
 Ypredicted <- matrix(Yp, nrow = 1)
 Ypredicted <- t(Ypredicted)
 
-result_data <- data.frame(Ytest)
+result_data <- data. me(Ytest)
 result_data$Ypredicted <- Ypredicted
 
 #aplicando a função rsq no df
