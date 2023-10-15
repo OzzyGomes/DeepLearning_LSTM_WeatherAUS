@@ -1,3 +1,5 @@
+<h1>Predicting Humidity using Recurrent Neural Networks (RNN) - GitHub README </h1>
+<p>This repository contains code that demonstrates the use of Recurrent Neural Networks (RNN) for predicting humidity levels in Albury, Australia. The code utilizes the R package 'rnn' and the 'ggplot2' library for data visualization.</p>
 <h2>Table of Contents</h2>
 <ul>
   <li><a href="#introduction">Introduction</a></li>
